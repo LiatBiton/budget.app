@@ -1,0 +1,50 @@
+.spend-page{
+    .card{
+        margin-top: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-color: white;
+        
+    }
+    .border-radius{
+        border-radius: 10px;
+    }
+    .blue{
+        background-color: #fac51e;
+        padding: 20px 10px;
+    }
+    .header-card{
+        text-align: center;
+    }
+    .main-spend-page{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .spend-list{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .chart-spend-page{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-left: 30px;
+    }
+    
+    
+}
+
+@media only screen and (max-width: 1100px) {
+    .spend-page{
+        .main-spend-page{
+            display: flex;
+            flex-direction: column;
+        }
+        .chart-spend-page{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-left: 0px;
+        }
+    }
+}

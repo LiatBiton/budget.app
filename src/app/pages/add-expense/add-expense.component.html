@@ -1,0 +1,38 @@
+<form (ngSubmit)="onAddExpense()" class="form-prefernces">
+    <div class="card layout">
+        <div class="expense-input">
+            <div class="label-container"><label for="description">Description</label></div>
+            <input [(ngModel)]="expense.description" type="text" name="description" id="description">
+        </div>
+
+        <div class="expense-input">
+            <div class="label-container"><label for="name">Type</label></div>
+            <input *ngIf="elseSelected" [(ngModel)]="expense.name" type="text" name="name" id="name" placeholder="Write the type of your expense in one word">
+            <select *ngIf="elseSelected===false" [(ngModel)]="expense.name" type="text" name="name" id="name" (change)="onSelected()">
+                <option value="Rent">Rent</option>
+                <option value="Restaurants">Resturants</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Groceries">Groceries</option>
+                <option value="Gym">Gym</option>
+                <option value="else">else</option>
+            </select>
+        </div>
+
+        <div class="expense-input">
+            <div class="label-container"><label for="timeStemp">Date</label></div>
+            <input [(ngModel)]="expense.timeStemp" type="date" name="timeStemp" id="timeStemp">
+        </div>
+
+        <div class="expense-input">
+            <div class="label-container"><label for="value">Price</label></div>
+            <input [(ngModel)]="expense.value" type="number" name="value" id="value">
+        </div>
+
+        <div class="expense-input">
+            <div class="label-container"><label for="methodsPayment">Payment Method</label></div>
+            <input [(ngModel)]="expense.methodsPayment" type="text" name="methodsPayment" id="methodsPayment">
+        </div>
+
+    </div>
+    <a (click)="onAddExpense()" class="add-btn" [routerLink]="['/expenses']" routerLinkActive="active">Add</a>
+</form>

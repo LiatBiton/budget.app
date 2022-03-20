@@ -1,0 +1,15 @@
+<form (ngSubmit)="onSavePrefernces()" class="form-prefernces">
+    <div class="card layout">
+        <h2 style="margin: 2px 0px;">Name</h2>
+        <input #nameInput [(ngModel)]="user.name" type="text" name="name" id="name">
+
+        <h2 style="margin-top: 60px;">Budget</h2>
+        <h4>A budget only works if you are honest about both your income and expenses.</h4>
+        <input #nameInput [(ngModel)]="user.budget" type="number" name="budget" id="budget">
+
+        <h2 style="margin-top: 60px;">Goal</h2>
+        <h4>Imagine something you were always wanted but you didn't have enough money for, how much it cost?</h4>
+        <input #nameInput [(ngModel)]="user.goal" type="number" name="goal" id="goal">
+    </div>
+    <a class="prefernces-btn" routerLink="" routerLinkActive="active" >Save</a>
+</form>

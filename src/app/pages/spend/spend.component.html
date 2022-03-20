@@ -1,0 +1,14 @@
+<section class="spend-page">
+    <div class="blue header-card">
+        <div class="card layout border-radius">
+            <h4>BALANCE AVAILIBLE</h4>
+            <h2 style="letter-spacing: 1px;">{{((user$|async).budget-(user$|async).spend).toLocaleString()}}</h2>
+        </div>
+    </div>
+    <section class="main-spend-page">
+        <div class="chart-spend-page"><cash-flow-trends></cash-flow-trends></div>
+        <div class="spend-list">
+            <spend-list  (onRemove)="onRemoveSpend($event)"[spends]="(spends$|async)" ></spend-list>
+        </div>
+    </section>
+</section>

@@ -1,0 +1,29 @@
+<section class="home-page">
+    <div class="layout">
+        <h1>Hey {{(user$|async).name}}, good to see you!</h1>
+    </div>
+    <div class="card layout remainder-card">
+        <img class="light-img" src='../../../assets/light.png'/>
+        <h1>You should save {{(user$|async).goal}}$ this month</h1>
+    </div>
+    <div class="card layout">
+        <h2>Cash Flow</h2>
+        <h4>Am I spending less then I make?</h4>
+        <div class="card2">
+            <h4>THIS MONTH</h4>
+            <h2>{{(user$|async).spend}} USD</h2>
+            <h3>{{daysleft()}} days left</h3>
+        </div>
+    </div>
+    <div class="card">
+        <div class="layout">
+        <h2>Cash Flow Trends</h2>
+        <h4>What did I spent my money on?</h4>
+        </div>
+        <div class="layout">
+            <div class="card2 charts-card">
+                <cash-flow-trends></cash-flow-trends>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,29 @@
+
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    main {
+        flex-grow: 1;
+        background-color: #e6e3e342;;
+    }
+
+    footer {
+        
+        display: flex;
+        justify-content: center;
+    }
+    .pink{
+        color: #e96b56
+    }
+    .yellow{
+        color: #fac51e;
+    }
+    .green{
+        color: #39bb9c;
+    }
+    .orange{
+        color: #f8a026;
+    }
+
+}

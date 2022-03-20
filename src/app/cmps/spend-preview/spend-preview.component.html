@@ -1,0 +1,18 @@
+
+<section class="spend-preview">
+    <div class="card card-layout">
+        <div style="display: flex; align-items: center;  justify-content: space-between;">
+            <div style="display: flex; align-items: center;">
+            <img *ngIf="types.includes(category.key); else defaultImg" class="icon-img" src={{src}}>
+            <ng-template #defaultImg><img class="icon-img" src='/assets/Spend.svg'></ng-template>
+            <h2>{{category.key}}</h2>
+            </div>
+            <h4 [ngClass]="isCollapsed ? 'arrow up' : 'arrow down'" (click)="openCategoryList()"></h4>
+        </div>
+        <category-spends (onRemove)="onRemove.emit($event)"
+            *ngFor="let spend of spends"
+            [spend]="spend"
+            [isCollapsed]="isCollapsed">
+        </category-spends>
+    </div>
+</section>

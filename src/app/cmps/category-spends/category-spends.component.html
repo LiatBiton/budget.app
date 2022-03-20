@@ -1,0 +1,51 @@
+<ng-template #elseBlock>
+    <section [ngClass]="isCollapsed ? 'block' : 'none'">
+        <div class="info">
+            <div class="first-row">
+                <section class="date-section">
+                    <h2 style="margin-right: 10px;">{{getDayNumber(spend.timeStemp)}}</h2>
+                    <div class="date-description">
+                        <h4 style="font-weight: 600;">{{getMonth(spend.timeStemp)}}/{{getYear(spend.timeStemp)}}</h4>
+                        <h5 class="day-name">{{getDayName(spend.timeStemp)}}</h5>
+                    </div>
+                </section>
+                <section class="actions">
+                    <button class="edit-btn" (click)="OnEditClick()" >Edit</button>
+                    <button class="remove-btn" (click)="onRemoveSpend()">x</button>
+                </section>
+            </div>
+            <div class="second-row">
+                <h4 style="font-weight: 600; color: black;">{{spend.description}}</h4>
+                <h4 style="font-weight: 600; color: #e96b56;">{{spend.value}}$</h4>
+            </div>
+        </div>
+    </section>
+</ng-template>
+
+<section *ngIf="editMode; else elseBlock" [ngClass]="isCollapsed ? 'block' : 'none'">
+    <form class="info" (ngSubmit)="onSaveSpend()">
+        <div class="first-row">
+            <section class="date-section">
+                <label for="timeStemp">Date</label>
+                <input [ngModel]="spend.timeStemp|date:'yyyy-MM-dd'" (ngModelChange)="spend.timeStemp=$event" type="date" name="timeStemp" id="timeStemp">
+            </section>
+            <section class="actions">
+                <button  class="edit-btn" >Save</button >
+                <button class="remove-btn" (click)="onRemoveSpend()">x</button>
+            </section>
+        </div>
+        <div class="second-row">
+            <div style="width: 70%;">
+                <label for="description">Description</label>
+                <input style="width: 74%;" [(ngModel)]="spend.description" type="text" name="description" id="description">
+            </div>
+            <div>
+                <label for="value">expense</label>
+                <input style="width: 60px;" [(ngModel)]="spend.value" type="number" name="value" id="value">
+            </div>
+        </div>
+    </form>
+</section>
+
+
+    

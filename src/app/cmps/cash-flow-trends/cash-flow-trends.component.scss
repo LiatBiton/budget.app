@@ -1,0 +1,21 @@
+div.advanced-pie-legend{
+    width: 500px
+}
+
+.desk-chart{
+    display: block;
+}
+
+.mobile-chart{
+    display: none;
+}
+
+@media only screen and (max-width: 650px) {
+    .mobile-chart{
+        display: block;
+    }
+    .desk-chart{
+        display: none;
+    }
+
+}

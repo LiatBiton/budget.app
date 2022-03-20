@@ -1,0 +1,47 @@
+.none{
+    display: none;
+}
+
+.block{
+    display: block;
+}
+.day-name{
+    background-color: #b8b5b5;
+    color: white;
+    font-weight: 600;
+    padding: 3px;
+    border-radius: 5px; 
+}
+.first-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d0ccccba;
+}
+.date-section{
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+    margin-top: 15px;
+}
+.second-row{
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 0px;
+}
+
+.edit-btn{
+    cursor: pointer;
+    color: white;
+    font-size: 10px;
+    color: black;
+    padding: 3px 7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: solid 1px black;
+}
+    

@@ -1,0 +1,9 @@
+
+<section class="spend-list">
+    <spend-preview 
+        (onRemove)="onRemove.emit($event)"
+        *ngFor="let total of spends.totals | keyvalue"
+        [category]="total"
+        [spends]="spends.rows| categoryFilter:total.key">
+    </spend-preview>
+</section>

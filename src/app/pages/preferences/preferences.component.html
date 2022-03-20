@@ -1,0 +1,6 @@
+<section class="prefernces-page">
+    <div class="layout">
+        <h1 style="margin-top: 40px;">Hey {{(user$|async).name}}, here you can set your budget and your goals</h1>
+    </div>
+    <form-prefernces [user]="user$|async"></form-prefernces>
+</section>

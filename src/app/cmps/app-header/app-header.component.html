@@ -1,0 +1,18 @@
+<header class="container layout">
+    <a class="logo" routerLink="" routerLinkActive="active" >Budget</a>
+    <nav class="nav-desktop">
+        <a class="add-btn" routerLink="add" routerLinkActive="active" >Add Expense +</a>
+        <a routerLink="expenses" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >Expenses</a>
+        <a routerLink="preferences" routerLinkActive="active" >Preferences</a>
+    </nav>
+    <button class="hamburger" type="button" (click)="openMenu()">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+    </button>
+    <nav class="nav-mobile" *ngIf="mobileMenu">
+        <a (click)="closeModel()" class="add-btn" routerLink="add" routerLinkActive="active" >Add Expense +</a>
+        <a (click)="closeModel()" routerLink="expenses" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >Expenses</a>
+        <a (click)="closeModel()" routerLink="preferences" routerLinkActive="active" >Preferences</a>
+    </nav>
+</header>
