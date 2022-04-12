@@ -1,27 +1,19 @@
-# PayAppAngular
+# Budget
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
+### Check this out - https://budget-liatb.herokuapp.com/#/
 
-## Development server
+<div display="flex">
+  <img width="200" height="390" src="https://res.cloudinary.com/dxjxht7x9/image/upload/v1649774078/Screen_Shot_2022-04-12_at_17.33.25_w5d6ff.png"/>
+  <img width="200" height="385" src="https://res.cloudinary.com/dxjxht7x9/image/upload/v1649774088/Screen_Shot_2022-04-12_at_17.33.00_dlfdwc.png"/>
+  </div>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Tech stack :
 
-## Code scaffolding
+### Frontend : 
+* Angular
+* Rxjs
+* Sass
+* TypeScript
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+all rights reserved to Liat Bitton, 2022
